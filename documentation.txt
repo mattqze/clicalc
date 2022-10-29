@@ -12,3 +12,4 @@ Ex: calc.exe 2+3
 However you would need to parse the data and split the argument into 3 characters then change 2,3 to ints and etc.
 Eventually I'll get to it hoping, I hope I don't give up.
 Added square root calculation.
+Added Percent.
