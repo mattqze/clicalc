@@ -1,0 +1,13 @@
+# Documentation
+I made CLi Calc while bored.
+The first version completed Oct 28 2022 was very crude, you would have to put in numbers through a prompt rather than as an argument.
+I thought it was kind of stupid asking for the numbers like that so I decided to try making it easier for the end user to input into and use the calculator.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+At 9:33 I opened a new project in Visual Studio to try and solve the above problems.
+The source code is directly from my repos folder for Visual Studio, uploaded at 10:15. 
+I revised my problems in half an hour while retaining all features of the original version.
+Great success.
+I would like to, later, add the ability for the user to input numbers as you would write them, like in the history.calc file.
+Ex: calc.exe 2+3
+However you would need to parse the data and split the argument into 3 characters then change 2,3 to ints and etc.
+Eventually I'll get to it hoping, I hope I don't give up.
