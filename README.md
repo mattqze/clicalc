@@ -1,4 +1,4 @@
-# clicalc - 2 Number Calculator.
+# clicalc - Command Line 2 Number Calculator.
 ### How to use:
 calc add num num<br>
 calc subtract num num<br>
