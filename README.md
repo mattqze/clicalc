@@ -4,6 +4,7 @@ calc add num num<br>
 calc subtract num num<br>
 calc multiply num num<br>
 calc divide num num<br>
+calc squareroot num<br>
 calc history show<br>
 calc history clear<br>
 ### I made this in 1 hour.
