@@ -8,4 +8,6 @@ calc squareroot num<br>
 calc num percentof num<br>
 calc history show<br>
 calc history clear<br>
+calc error history show<br>
+calc error history clear (NOT RECOMMENDED)<br>
 ### I made this in 1 hour.
