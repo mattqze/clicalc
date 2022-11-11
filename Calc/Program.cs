@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
@@ -15,8 +16,30 @@ namespace Calc
             if (args[0] == "help")
             {
                 Console.WriteLine("Operators: \n\tAddition: add\n\tSubtraction: subtract\n\tMultiplication: multiply\n\tDivision: divide\n\tSquare Root: squareroot\n\tPercent: percentof");
-                Console.WriteLine("How to use:\n\tTo use CLI-Calc, you first need to understand the options. \n\tAbove this are all the calculations you can currently do.\n\tBelow this is instructions for each operator.\n\tIf you run into a bug, use the bug reporting command below.\n\tcalc report error\nHow to input data:\n\tadd: calc add num1 num2\n\tsubtract: calc subtract num1 num2\n\tdivide: calc divide num1 num2\n\tmultiply: calc multiply num1 num2\n\tsquareroot: calc squareroot num1\n\tpercentof: calc num1 percentof num2");
+                Console.WriteLine("How to use:\n\tTo use CLI-Calc, you first need to understand the options. \n\tAbove this are all the calculations you can currently do.\n\tBelow this is instructions for each operator.\n\tIf you run into a bug, use the bug reporting command below.\n\tcalc report error\n\tTo update: calc update \nHow to input data:\n\tadd: calc add num1 num2\n\tsubtract: calc subtract num1 num2\n\tdivide: calc divide num1 num2\n\tmultiply: calc multiply num1 num2\n\tsquareroot: calc squareroot num1\n\tpercentof: calc num1 percentof num2");
                 Console.WriteLine("History Control:\n\tShow History: calc history show\n\tClear History: calc history clear\n\tShow Error History: calc error history show\n\tClear Error History (NOT RECOMMENDED): calc error history clear");
+                return;
+            }
+            if(args[0] == "update")
+            {
+                WebClient client = new WebClient();
+                string asd = client.DownloadString("https://github.com/mattqze/clicalc/releases/latest/download/changelog.txt");
+                Console.WriteLine("Update Log for latest release:\n" + asd);
+                Console.WriteLine("Would you like to update? [Y/N]");
+                ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                if (keyInfo.Key == ConsoleKey.Y)
+                {
+                    System.Diagnostics.Process.Start("https://github.com/mattqze/clicalc/releases/latest/");
+                    return;
+                }
+                if (keyInfo.Key == ConsoleKey.N)
+                {
+                    Console.WriteLine("Canceled Update");
+                }
+                if (keyInfo.Key != ConsoleKey.N)
+                {
+                    Console.WriteLine("Canceled Update");
+                }
                 return;
             }
             if (args[1] == "percentof")
