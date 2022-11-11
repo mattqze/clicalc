@@ -10,4 +10,5 @@ calc history show<br>
 calc history clear<br>
 calc error history show<br>
 calc error history clear (NOT RECOMMENDED)<br>
+calc update<br>
 ### I made this in 1 hour.
